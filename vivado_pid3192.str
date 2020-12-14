@@ -1503,3 +1503,4 @@ dismissDialog("Program Device"); // bC (cs)
 // Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
 // Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
 dismissDialog("Program Device"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,305 MB. GUI used memory: 93 MB. Current time: 12/14/20, 4:15:39 PM CST
