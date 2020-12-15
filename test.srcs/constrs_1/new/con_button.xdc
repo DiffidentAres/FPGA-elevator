@@ -1,7 +1,7 @@
 # button
 
 #input clk, changedata, changepos;
-#input run, reset;
+#input run, reset, cancel;
 #output[3:0] group1, group2;
 #output[7:0] data1, data2;
 #output led;
@@ -23,6 +23,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
 set_property PACKAGE_PIN J2 [get_ports led]
 set_property IOSTANDARD LVCMOS33 [get_ports led]
+
+set_property PACKAGE_PIN R11 [get_ports cancel]
+set_property IOSTANDARD LVCMOS33 [get_ports cancel]
 # group1
 set_property PACKAGE_PIN G2 [get_ports group1[3]]
 set_property IOSTANDARD LVCMOS33 [get_ports group1[3]]
