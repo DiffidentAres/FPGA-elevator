@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Dec 15 16:10:04 2020
+| Date         : Tue Dec 15 21:09:00 2020
 | Host         : Xiaoxin-win10 running 64-bit major release  (build 9200)
 | Command      : report_drc -file button_drc_routed.rpt -pb button_drc_routed.pb -rpx button_drc_routed.rpx
 | Design       : button
@@ -50,25 +50,26 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net bd/CLK is a gated clock net sourced by a combinational pin bd/group[3]_i_1/O, cell bd/group[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net bd/out_changepos is a gated clock net sourced by a combinational pin bd/pos[3]_i_4/O, cell bd/pos[3]_i_4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net bu/CLK is a gated clock net sourced by a combinational pin bu/count[3]_i_2/O, cell bu/count[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net bu/CLK is a gated clock net sourced by a combinational pin bu/d2_0[3]_i_3/O, cell bu/d2_0[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT bd/group[3]_i_1 is driving clock pin of 5 cells. This could lead to large hold time violations. Involved cells are:
-group_reg[0], group_reg[1], group_reg[2], group_reg[3],
-group_reg[3]_lopt_replica
+A LUT bd/pos[3]_i_4 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+pos_reg[0], pos_reg[1], pos_reg[2], pos_reg[3]
 Related violations: <none>
 
 PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT bu/count[3]_i_2 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
-count_reg[0], count_reg[1], count_reg[2], count_reg[3]
+A LUT bu/d2_0[3]_i_3 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+d2_0_reg[0], d2_0_reg[1], d2_0_reg[2], d2_0_reg[3], d2_1_reg[0],
+d2_1_reg[1], d2_1_reg[2], d2_1_reg[3], d2_2_reg[0], d2_2_reg[1],
+d2_2_reg[2], d2_2_reg[3], d2_3_reg[0], d2_3_reg[1], d2_3_reg[2] (the first 15 of 16 listed)
 Related violations: <none>
 
 

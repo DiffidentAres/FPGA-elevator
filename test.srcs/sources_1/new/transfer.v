@@ -39,7 +39,8 @@ case (dec)
             4'b0111: hex = 8'he0;
             4'b1000: hex = 8'hfe;
             4'b1001: hex = 8'hf6;
-            default: hex = 8'hfc;  
+            4'b1010: hex = 8'b00;
+            default: hex = 8'h00;  
 endcase 
 end
 endmodule

@@ -88,6 +88,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/vivado-projects/test/test.srcs/sources_1/new/button_debounce.v
+  D:/vivado-projects/test/test.srcs/sources_1/new/display.v
+  D:/vivado-projects/test/test.srcs/sources_1/new/div_clk.v
   D:/vivado-projects/test/test.srcs/sources_1/new/div_clk_1hz.v
   D:/vivado-projects/test/test.srcs/sources_1/new/transfer.v
   D:/vivado-projects/test/test.srcs/sources_1/new/button.v
