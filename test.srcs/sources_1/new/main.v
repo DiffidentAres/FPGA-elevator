@@ -26,5 +26,5 @@ input[3:0] tmp;
 input[3:0] tmp2;
 output[3:0] group;
 output[7:0] data;
-button b1(up, down, left, right, group, data, tmp, tmp2);
+//button b1(up, down, left, right, group, data, tmp, tmp2);
 endmodule
