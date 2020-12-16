@@ -88,7 +88,7 @@ always @ (posedge clk_t) begin
     end
     
    if (out_cancel) begin
-        if (~run) begin
+        if (~run) begin  
             case(pos) 
                 3: begin d2_3 = 10; end
                 
@@ -113,6 +113,11 @@ always @ (posedge clk_t) begin
             if (max < d2_0 && d2_0 != 10) max <= d2_0;
     end
     
+    if (~run) begin
+        max = 0;
+        min = 9;
+    end
+    
     if (counter >= 1000) begin
         if(reset && ~run) begin level = 0; end
         else begin
@@ -121,6 +126,11 @@ always @ (posedge clk_t) begin
                 level = (level + 1) % 10;
                 time_counter = time_counter + 1;
             end
+            else if (level > max) begin
+                level = (level - 1);
+                time_counter = time_counter + 1; 
+            end
+            
             case (level)
                 d2_3: begin led <= 1; d2_3 <= 10; duration <= time_counter; time_counter <= 0;end
                 d2_2: begin led <= 1; d2_2 <= 10; duration <= time_counter; time_counter <= 0; end
